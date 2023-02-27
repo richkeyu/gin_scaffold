@@ -6,7 +6,6 @@ import (
 
 	"gateway/api/rest"
 	"gateway/pkg/db"
-	"gateway/pkg/proxy"
 
 	"github.com/richkeyu/gocommons/client"
 	"github.com/richkeyu/gocommons/config"
@@ -28,10 +27,10 @@ func main() {
 
 	// 初始化Trace
 	trace.InitGenerator()
-	// 初始化代理
-	proxy.InitProxy()
 	// 初始化缓存
 	db.InitLocalCache()
+	// 初始化数据库
+	db.InitMysql()
 
 	// register route and init server
 	router := rest.InitRouter()

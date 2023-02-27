@@ -10,7 +10,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var PaySvrMysql *gorm.DB
+var LQBSvrMysql *gorm.DB
 
 func InitMysql() {
 	var err error
@@ -22,8 +22,8 @@ func InitMysql() {
 
 	for dbName, dbConf := range mysqlConf {
 		switch dbName {
-		case constant.MysqlPaySvr:
-			PaySvrMysql, err = mysql.InitMysqlClient(dbConf)
+		case constant.MysqlLQBSvr:
+			LQBSvrMysql, err = mysql.InitMysqlClient(dbConf)
 		}
 
 		if err != nil {

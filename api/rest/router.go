@@ -3,9 +3,10 @@ package rest
 import (
 	"gateway/api/rest/hello"
 	"gateway/pkg/middleware/header"
-	"github.com/richkeyu/gocommons/middleware"
+
 	"github.com/arl/statsviz"
 	"github.com/gin-gonic/gin"
+	"github.com/richkeyu/gocommons/middleware"
 )
 
 var route gin.IRouter
@@ -25,7 +26,7 @@ func InitRouter() *gin.Engine {
 		statsviz.IndexAtRoot("/debug/stat").ServeHTTP(context.Writer, context.Request)
 	})
 
-	route = r.Group("/api/v2/")
+	route = r.Group("/api/v1/")
 
 	registerRoute()
 
