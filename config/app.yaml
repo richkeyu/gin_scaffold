@@ -1,0 +1,23 @@
+app:
+  name: application
+  http_port: 8400
+  read_timeout: 30
+  write_timeout: 30
+
+service:
+  base:
+    base_uri: http://127.0.0.1:8401
+  pay:
+    base_uri: http://127.0.0.1:8403
+  store:
+    base_uri: http://127.0.0.1:8404
+
+jwt:
+  merchant:
+    secret_key: "+matthg$w)x_6#ax0uug(jdy0)@^9(d)%w6nr$bmbcsac-n8x4"
+    expired_duration: 604800
+    issuer: "dev"
+  store:
+    secret_key: "+matthg$w)x_5#ax0uug(jdy0)@^9(a)%w6nr$bmbcsac-n8x4"
+    expired_duration: 604800
+    issuer: "dev"

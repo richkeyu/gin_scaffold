@@ -1,0 +1,8 @@
+.idea/
+log/*
+config/app_dev.yaml
+tmp/*
+config/app_lhc.yaml
+test_run.go
+vendor
+.DS_Store
